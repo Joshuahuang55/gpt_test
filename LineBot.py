@@ -20,6 +20,11 @@ app = Flask(__name__)
 line_bot_api = LineBotApi(Settings.LINE_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(Settings.LINE_CHANNEL_SECRET)
 
+
+@app.route('/')
+def home():
+    return 'Hello, World!'
+
 @app.route("/callback", methods=['POST'])
 def callback():
     signature = request.headers['X-Line-Signature']
@@ -34,9 +39,6 @@ def callback():
 
     return 'OK'
 
-@app.route('/')
-def home():
-    return 'Hello, World!'
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
