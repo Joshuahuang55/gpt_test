@@ -4,7 +4,7 @@ from spacy.lang.en import English
 from spacy.lang.zh import Chinese
 import langid
 import json
-
+import os
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
