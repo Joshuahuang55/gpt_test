@@ -34,9 +34,9 @@ def callback():
 
     return 'OK'
 
-@app.route("/health", methods=['GET'])
-def health():
-    return 'OK', 200
+@app.route('/')
+def home():
+    return 'Hello, World!'
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
