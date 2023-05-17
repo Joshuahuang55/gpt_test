@@ -1,7 +1,8 @@
 import Settings
 import ChatGPT
-
 import Settings
+
+import os 
 import openai
 from spacy.lang.en import English
 from spacy.lang.zh import Chinese
@@ -17,8 +18,8 @@ app = Flask(__name__)
 
 # sudo FLASK_APP=LineBot.py flask run --host=0.0.0.0 --port=80
 # 請替換成您的Channel Access Token和Channel Secret
-line_bot_api = LineBotApi(Settings.LINE_CHANNEL_ACCESS_TOKEN)
-handler = WebhookHandler(Settings.LINE_CHANNEL_SECRET)
+line_bot_api = LineBotApi(os.getenv("LINE_CHANNEL_ACCESS_TOKEN"))
+handler = WebhookHandler(os.getenv("LINE_CHANNEL_SECRET"))
 
 
 @app.route('/')

@@ -6,7 +6,7 @@ import langid
 import json
 
 
-openai.api_key = Settings.CHATGPT_API_KEY
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 engine="text-davinci-003"
 max_tokens = 200
