@@ -1,6 +1,4 @@
-import os 
-from linebot import LineBotApi, WebhookHandler
-LINE_CHANNEL_ACCESS_TOKEN = os.getenv("LINE_CHANNEL_ACCESS_TOKEN")
-LINE_CHANNEL_SECRET = os.getenv("LINE_CHANNEL_SECRET")
+LINE_CHANNEL_ACCESS_TOKEN = 'jMYrhi8gzzBrVI0UsBTtiIPrhxlfni+Nm9/Eha4BYCGm+Q/Gtt+1IRAk9e84ab86lirHm90fA+gof29efTqLfrTw7sKAlAziiN5tHI2PfoZe2qDsbcjimNUMcwOxV3grsF0xGLg9wyM1dOZf/NVlzwdB04t89/1O/w1cDnyilFU='
+LINE_CHANNEL_SECRET = '6f37b50462a4bdfb96e40152eb58c193'
 
-CHATGPT_API_KEY = os.getenv("OPENAI_API_KEY")
+CHATGPT_API_KEY = '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'

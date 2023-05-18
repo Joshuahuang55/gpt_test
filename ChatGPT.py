@@ -4,9 +4,9 @@ from spacy.lang.en import English
 from spacy.lang.zh import Chinese
 import langid
 import json
-import os
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+
+openai.api_key = Settings.CHATGPT_API_KEY
 
 engine="text-davinci-003"
 max_tokens = 200
